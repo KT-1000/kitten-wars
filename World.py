@@ -1,7 +1,9 @@
 class City:
 
-    def __init__(self, name):
-        self.name = name1
+    def __init__(self, name, x, y):
+        self.name = name
+        self.x = x
+        self.y = y
 
 
 class Planet:
@@ -29,3 +31,5 @@ class Planet:
         for grid_row in self.grid:
             print grid_row
 
+    def place_city(self, city):
+        self.grid[city.x][city.y].append(city)
